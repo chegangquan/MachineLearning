@@ -136,6 +136,7 @@
 粉红色的线为，sigmoid的标准函数值
 蓝色点为样本数据的拟合结果
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021011000375759.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMjIwOA==,size_16,color_FFFFFF,t_70#pic_center)
+
 **2样本数据的真实分布散点图及分类决策边界**
 	
 绿色✩为（2，6）的分类结果，属于类别1
