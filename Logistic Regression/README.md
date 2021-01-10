@@ -76,13 +76,12 @@
 　　
 **hθ(x) = θ0 + θ1·x1+θ2·x2；**
 #### b损失函数（loss function）：
-　　
+
 又称为代价函数。通常用损失函数来度量拟合的程度，从而评估模型拟合的好坏，记为 J(θ)。损失函数是关于 θ 的函数！此时θ不再是函数的参数，而是损失函数的自变量！对于线性回归的损失函数可以表示为：
-　　
-　　***J(θ) = 1/(2 *m) * ∑ ( hθ(xi) - yi )^2****
-　　
-其中 m表示样本数量， xi 表示第 i 个样本特征，yi 表示第 i 个样本对应的标签的真实值， hθ(xi) 为假设函数。 当我们计算损失时，是将每个样本中的特征 xi 和对应的标签真实值 yi 带入损失函数，此时，损失函数中就只剩下 θ 是未知的。 　　
-　　
+***J(θ) = 1/(2 *m) * ∑ ( hθ(xi) - yi )^2****;
+
+其中m表示样本数量， xi 表示第 i 个样本特征，yi 表示第 i 个样本对应的标签的真实值， hθ(xi) 为假设函数。 当我们计算损失时，是将每个样本中的特征 xi 和对应的标签真实值 yi 带入损失函数，此时，损失函数中就只剩下 θ 是未知的。 　　
+
 每一个样本都会有一个拟合损失，将所有样本的损失相加，就是整个样本集的拟合损失。
 
 #### c损失函数的梯度：
@@ -93,13 +92,14 @@
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210110000614547.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMjIwOA==,size_16,color_FFFFFF,t_70#pic_center)
  #### e梯度下降求解θ
  
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021011000145038.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2021011000145038.png#pic_center)
 
 α在梯度下降算法中被称作为学习率或者步长，意味着我们可以通过α来控制每一步走的距离，α不能太大，以免错过了最低点。也不能太小，走的太慢，导致收敛过慢。
 
 α太大的情形：
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210110002007445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMjIwOA==,size_16,color_FFFFFF,t_70#pic_center)
+
 我们期待的效果：
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210110002130899.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMjIwOA==,size_16,color_FFFFFF,t_70#pic_center)
@@ -112,18 +112,23 @@
 
 #### 函数说明
 **1 sigmoid()**
+
 返回sigmoid函数值 
 
 **2 draw_sigmoid():**
-画sigmoid函数图，x轴的取值范围 -10, 10
+
+画sigmoid函数图，x轴的取值范围 (-10, 10).
 
 **3 gradient_down（）**
+
 迭代梯度下降求得最佳参数θ
 
 **4 plot（）**
+
 画样本数据拟合图 ，样本数据散点图加上分界线
 
 **5 classify（）**
+
 将数据代入模型，返回分类结果
 
 ### 结果
@@ -132,8 +137,12 @@
 蓝色点为样本数据的拟合结果
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021011000375759.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMjIwOA==,size_16,color_FFFFFF,t_70#pic_center)
 **2样本数据的真实分布散点图及分类决策边界**
-	绿色✩为（2，6）的分类结果，属于类别1![在这里插入图片描述](https://img-blog.csdnimg.cn/20210110003947934.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMjIwOA==,size_16,color_FFFFFF,t_70#pic_center)
-	![在这里插入图片描述](https://img-blog.csdnimg.cn/20210110004255404.png#pic_center)
+	
+绿色✩为（2，6）的分类结果，属于类别1
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210110003947934.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMjIwOA==,size_16,color_FFFFFF,t_70#pic_center)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210110004255404.png#pic_center)
 
 ### 难题与解决
 梯度下降算法，主要是参考以下几个博客
