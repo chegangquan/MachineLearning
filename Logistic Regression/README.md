@@ -73,13 +73,17 @@
 ### 3 相关公式
 #### a假设函数（hypothesis function）：
 　　所谓假设函数，就是监督学习中，我们拟合样本特征映射到目标变量的函数，记为 hθ(x)，θ为函数的参数。在此次实验中我们可以表示为：
-　　**hθ(x) = θ0 + θ1·x1+θ2·x2；**
+　　
+**hθ(x) = θ0 + θ1·x1+θ2·x2；**
 #### b损失函数（loss function）：
 　　
-　　又称为代价函数。通常用损失函数来度量拟合的程度，从而评估模型拟合的好坏，记为 J(θ)。损失函数是关于 θ 的函数！此时θ不再是函数的参数，而是损失函数的自变量！对于线性回归的损失函数可以表示为：　　
+又称为代价函数。通常用损失函数来度量拟合的程度，从而评估模型拟合的好坏，记为 J(θ)。损失函数是关于 θ 的函数！此时θ不再是函数的参数，而是损失函数的自变量！对于线性回归的损失函数可以表示为：
+　　
 　　***J(θ) = 1/(2 *m) * ∑ ( hθ(xi) - yi )^2****
-　　其中 m表示样本数量， xi 表示第 i 个样本特征，yi 表示第 i 个样本对应的标签的真实值， hθ(xi) 为假设函数。 当我们计算损失时，是将每个样本中的特征 xi 和对应的标签真实值 yi 带入损失函数，此时，损失函数中就只剩下 θ 是未知的。 　　
-　　每一个样本都会有一个拟合损失，将所有样本的损失相加，就是整个样本集的拟合损失。
+　　
+其中 m表示样本数量， xi 表示第 i 个样本特征，yi 表示第 i 个样本对应的标签的真实值， hθ(xi) 为假设函数。 当我们计算损失时，是将每个样本中的特征 xi 和对应的标签真实值 yi 带入损失函数，此时，损失函数中就只剩下 θ 是未知的。 　　
+　　
+每一个样本都会有一个拟合损失，将所有样本的损失相加，就是整个样本集的拟合损失。
 
 #### c损失函数的梯度：
 损失函数的梯度即对 θi 求偏导，由于损失函数是关于 θ 的函数，因此，θ 的取值不同，得出来的的梯度向量也是不同的。借用“下山”的比喻来解释，θ 的不同取值，相当于处于山上的不同位置，每一个位置都会计算出一个梯度向量 ▽J(θ) 。
@@ -88,12 +92,16 @@
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210110000614547.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMjIwOA==,size_16,color_FFFFFF,t_70#pic_center)
  #### e梯度下降求解θ
+ 
  ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021011000145038.png#pic_center)
+
 α在梯度下降算法中被称作为学习率或者步长，意味着我们可以通过α来控制每一步走的距离，α不能太大，以免错过了最低点。也不能太小，走的太慢，导致收敛过慢。
 
 α太大的情形：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210110002007445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMjIwOA==,size_16,color_FFFFFF,t_70#pic_center)
 我们期待的效果：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210110002130899.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMjIwOA==,size_16,color_FFFFFF,t_70#pic_center)
 ### 作业环境, 文件说明，函数说明，调用的函数库以及涉及哪些技术
 环境：win10、pycharm、python3.6
@@ -129,7 +137,9 @@
 
 ### 难题与解决
 梯度下降算法，主要是参考以下几个博客
+
 [1.梯度下降与随机梯度下降概念及推导过程](https://blog.csdn.net/weixin_39445556/article/details/83661219)
+
 [2.梯度下降算法原理讲解——机器学习](https://blog.csdn.net/qq_41800366/article/details/86583789)
 
 ### 总结
